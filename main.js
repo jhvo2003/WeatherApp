@@ -1,6 +1,6 @@
 
 window.addEventListener("load", setup);
-var APIKey = "40f3502100b1d585c3700617f1066657";
+var APIKey = "5085017d3392121c188bb3fe674e1362";
 const queryURL = (city) => 'https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={APIkey}';
 
 function setup(){
@@ -28,6 +28,9 @@ function displayInfo(data){
     let tempF = CelsiusToF(tempC);
     let addTempF = document.getElementById("tempF");
     addTempF.innerHTML = "Temp (F): " + tempF;
+    let weather = data['weather']['description'];
+    let weatherAdd = document.getElementById("weatherType");
+    weatherAdd.innerHTML = "Weather: " + weatherAdd;
 
 }
 
